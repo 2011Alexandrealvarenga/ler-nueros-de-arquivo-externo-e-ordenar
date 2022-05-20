@@ -1,15 +1,17 @@
 <?php
 $arquivo = file("arquivo.txt");
-$arquivo = sort($arquivo);
-$m_arquivo = (max($arquivo));
+sort($arquivo, SORT_NUMERIC);
+
 ?>
-    <ul>        
-       <?php foreach ($m_arquivo as $arq){
-           ?>
-        <li><?php echo $arq ?></li>
-        <?php
-    }
-    ?>
-    </ul>
+<ul>
+
     <?php
+        foreach($arquivo as $arq){
+            ?> 
+                <li><?php echo $arq ?> </li>
+            <?php
+        }
+    ?>
+</ul>
+
 
